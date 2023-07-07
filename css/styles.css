@@ -218,6 +218,7 @@ nav a:focus {
   margin-bottom: 2em;
   display: grid;
   grid-template-columns: 1fr max-content;
+  grid-gap: 0 1em; 
   grid-template-areas:
     "image image"
     "title date"
@@ -244,6 +245,11 @@ nav a:focus {
 
 .article-read-more {
   grid-area: read-more;
+}
+
+.article-info,
+.article-title {
+  align-self: baseline;
 }
 
 @media (min-width: 675px) {
