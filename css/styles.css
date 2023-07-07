@@ -216,12 +216,34 @@ nav a:focus {
 
 .article-recent {
   margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-areas:
+    "image image"
+    "title date"
+    "body body"
+    "read-more .";
 }
 
-.article-recent-main {
+.article-image {
+  grid-area: image;
 }
 
-.article-recent-secondary {
+.article-title {
+  grid-area: title;
+}
+
+.article-info {
+  grid-area: date;
+  justify-self: end;
+}
+
+.article-body {
+  grid-area: body;
+}
+
+.article-read-more {
+  grid-area: read-more;
 }
 
 @media (min-width: 675px) {
